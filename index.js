@@ -14,6 +14,10 @@ module.exports = ({ accountId, email, password, envioriment="sandbox", apiVersio
     const PATH = '/app/common/scripting/scriptdebugger.nl'
     const URL = HOST + PATH
 
+    const formatSourceCode = source => {
+        return source.replace('define([', 'require([')
+    }
+
     const closeSession = () => {
         const nsPayload = `<nsDebugRequest operation='invalidateDebugSession'></nsDebugRequest>`
 
@@ -23,7 +27,7 @@ module.exports = ({ accountId, email, password, envioriment="sandbox", apiVersio
     const openSession = (sourceCode) => {
         const nsPayload = `<nsDebugRequest operation="adhoc">
                    <script runtimeversion="${apiVersion}">
-                     <![CDATA[${sourceCode}]]>
+                     <![CDATA[${formatSourceCode(sourceCode)}]]>
                      </script>
                      <url>
                        <![CDATA[]]>

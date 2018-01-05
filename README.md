@@ -9,7 +9,7 @@ npm install ns-eval
 ```
 
 ## Get started
-#### Eval string code
+### Eval string code
 
 ```javascript
 require('dotenv').config()

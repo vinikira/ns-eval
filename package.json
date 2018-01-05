@@ -1,0 +1,24 @@
+{
+  "name": "ns-eval",
+  "version": "1.0.0",
+  "description": "Remote NetSuite script evaluation with Debugger tool.",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  },
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "keywords": [
+    "netsuite",
+    "suitescript",
+    "javascript",
+    "debugger",
+    "eval"
+  ],
+  "author": "Vinícius Simões",
+  "license": "GPL-3.0"
+}
